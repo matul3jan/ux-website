@@ -79,3 +79,19 @@ function updateCartTotal() {
     cartTotalColumn.innerText = '$' + cartTotal.toFixed(2);
 }
 
+function onCheckout() {
+    const checkoutMessage = document.getElementById('checkout-message');
+    if (cartItems.length) {
+        localStorage.removeItem('cartItems');
+        cartTableBody.innerHTML = '';
+        cartTotalColumn.innerText = '$0.00';
+        checkoutMessage.innerHTML = "Thank you for shopping, your order was placed successfully &#128519;";
+        checkoutMessage.style.backgroundColor = "#dff0d8";
+        checkoutMessage.style.color = "#3c763d";
+    } else {
+        checkoutMessage.innerHTML = "Please add some products to your cart before checkout &#128532;";
+        checkoutMessage.style.backgroundColor = "rgb(243 160 160)";
+        checkoutMessage.style.color = "#ffffff";
+    }
+    checkoutMessage.style.display = 'block';
+}

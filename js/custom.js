@@ -20,3 +20,21 @@ function myMap() {
         }
     });
 }
+
+const form = document.getElementById('subscribe-form');
+const popup = document.getElementById('popup');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // prevent default form submission behavior
+
+    // show the popup message
+    popup.style.display = 'block';
+
+    // reset the form
+    form.reset();
+
+    // hide the popup message after 3 seconds
+    setTimeout(function () {
+        popup.style.display = 'none';
+    }, 3000);
+});

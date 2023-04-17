@@ -60,18 +60,16 @@
             >
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html"
-                    >Home <span class="sr-only">(current)</span></a
-                  >
+                  <a class="nav-link" href="index.html">Home </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="furniture.html">Products</a>
+                  <a class="nav-link" href="products.html">Products</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="about.html"> About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="blog.html">Our team</a>
+                  <a class="nav-link" href="team.html">Our team</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact</a>
@@ -80,8 +78,11 @@
             </div>
             <div class="quote_btn-container">
               <a href="cart.html">
-                <span> Cart </span>
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i
+                  class="fa fa-shopping-cart"
+                  style="color: #6bb7be"
+                  aria-hidden="true"
+                ></i>
               </a>
             </div>
           </div>
@@ -108,8 +109,9 @@
           </tr>
         </tfoot>
       </table>
+      <div id="checkout-message" style="display: none"></div>
       <div class="checkout-button">
-        <button>Checkout &#8594;</button>
+        <button onclick="onCheckout()">Checkout &#8594;</button>
       </div>
     </section>
 
@@ -117,15 +119,15 @@
     <section class="info_section long_section">
       <div class="container">
         <div class="contact_nav">
-          <a href="">
+          <a>
             <i class="fa fa-phone" aria-hidden="true"></i>
             <span> Call : +01 123455678990 </span>
           </a>
-          <a href="">
+          <a>
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <span> Email : demo@gmail.com </span>
           </a>
-          <a href="">
+          <a>
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <span> Raigad, India </span>
           </a>
@@ -138,12 +140,10 @@
               <div class="info_links">
                 <h5>QUICK LINKS</h5>
                 <div class="info_links_menu">
-                  <a class="" href="index.html"
-                    >Home <span class="sr-only">(current)</span></a
-                  >
-                  <a class="" href="furniture.html">Products</a>
+                  <a class="" href="index.html">Home </a>
+                  <a class="" href="products.html">Products</a>
                   <a class="" href="about.html"> About</a>
-                  <a class="" href="blog.html">Our team</a>
+                  <a class="" href="team.html">Our team</a>
                   <a class="" href="contact.html">Contact</a>
                 </div>
               </div>
@@ -176,21 +176,25 @@
             <div class="col-md-4">
               <div class="info_form">
                 <h5>SIGN UP TO OUR NEWSLETTER</h5>
-                <form action="">
-                  <input type="text" placeholder="Enter Your Email" />
+                <form id="subscribe-form">
+                  <input type="email" placeholder="Enter Your Email" required />
                   <button type="submit">Subscribe</button>
                 </form>
+
+                <div id="popup" style="display: none">
+                  Thanks for subscribing!
+                </div>
                 <div class="social_box">
-                  <a href="">
+                  <a href="https://www.facebook.com/" target="_blank">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                   </a>
-                  <a href="">
+                  <a href="https://twitter.com/" target="_blank">
                     <i class="fa fa-twitter" aria-hidden="true"></i>
                   </a>
-                  <a href="">
+                  <a href="https://www.linkedin.com/" target="_blank">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                   </a>
-                  <a href="">
+                  <a href="https://www.instagram.com/" target="_blank">
                     <i class="fa fa-instagram" aria-hidden="true"></i>
                   </a>
                 </div>

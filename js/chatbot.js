@@ -28,9 +28,26 @@ chatbotSendButton.addEventListener('click', () => {
         setTimeout(() => {
             const replyMessageElement = document.createElement('div');
             replyMessageElement.classList.add('message', 'reply');
-            replyMessageElement.textContent = 'Thanks, we will contact you shortly';
+            replyMessageElement.textContent = 'Send us your query & we will contact you shortly';
             messagesContainer.appendChild(replyMessageElement);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
         }, 2000);
     }
+});
+
+const contactForm = document.getElementById('contact-us-form');
+const contactPopup = document.getElementById('contact-popup');
+
+contactForm.addEventListener('submit', function (event) {
+    event.preventDefault(); // prevent default form submission behavior
+    // show the popup message
+    contactPopup.style.display = 'block';
+
+    // reset the form
+    contactForm.reset();
+
+    // hide the popup message after 3 seconds
+    setTimeout(function () {
+        contactPopup.style.display = 'none';
+    }, 5000);
 });
